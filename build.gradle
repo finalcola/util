@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+}
+
+group 'com.finalcola'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.6'
+    annotationProcessor 'org.projectlombok:lombok:1.18.6'
+
+    compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.25'
+
+}
